@@ -8,6 +8,7 @@ const exito = (response)=>{
         console.log(`Tipo:${tipo.name}`)
         console.log(`-----------------`)
     })
+    
 /*console.log(JSON.parse(response).results*/
 }
 
