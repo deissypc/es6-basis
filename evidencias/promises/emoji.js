@@ -5,15 +5,14 @@ let config = {
     url:"https://emojihub.herokuapp.com/api/all"
 
 }
-const f = async()=>{
-try {
-   let response = await axios(config)
-   response.data.forEach(anime => {
-    console.log(`emoji:${anime.name}`)
-    console.log(`//////////`)
-});
-} catch (error) {
-    console.error(error)
-}
-}
-f()
+
+axios(config)
+    .then((response)=>{
+       return response.data.forEach(emoji => {
+        console.log(`emoji:${emoji.name}`)
+        console.log(`//////////`)
+       });
+    })
+    .catch((error)=>{
+        console.log(error)
+    })
